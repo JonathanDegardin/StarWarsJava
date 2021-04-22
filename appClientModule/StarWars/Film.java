@@ -1,14 +1,17 @@
 package StarWars;
+
+import java.util.*;
+
 public class Film {
 	String titre;
-	String annéeDeSortie;
+	int anneeDeSortie;
 	int nombreEpisode;
 	int cout;
 	int recette;
-	List<Acteur> lesActeurs = new List<Acteur>;
-	public Film(String titre,String annéeDeSortie,int nombreEpisode,int cout,int recette) {
+	ArrayList<Acteur> lesActeurs = new ArrayList<Acteur>();
+	public Film(String titre,int anneeDeSortie,int nombreEpisode,int cout,int recette) {
 		this.titre = titre;
-		this.annéeDeSortie = annéeDeSortie;
+		this.anneeDeSortie = anneeDeSortie;
 		this.nombreEpisode = nombreEpisode;
 		this.cout = cout;
 		this.recette = recette;
@@ -16,8 +19,8 @@ public class Film {
 	String getTitre(){
 		return titre;
 	}
-	String getAnnéeDeSortie(){
-		return annéeDeSortie;
+	int getAnneeDeSortie(){
+		return anneeDeSortie;
 	}
 	int getNombreEpisode(){
 		return nombreEpisode;
@@ -29,6 +32,6 @@ public class Film {
 		return cout;
 	}
 	public String ToString() {
-		return("Le film " + this.titre + " sortie en " + this.annéeDeSortie + " d'une durée de " + this.nombreEpisode + " épisodes a couté " + this.cout + " et rapporté " + this.recette);
+		return("Le film " + this.titre + " sortie en " + this.anneeDeSortie + " d'une durée de " + this.nombreEpisode + " épisodes a couté " + this.cout + " et rapporté " + this.recette);
 	}
 }

@@ -1,19 +1,19 @@
 package StarWars;
 public class Acteur {
 	String Nom;
-	String Prénom;
-	public Acteur(String Nom,String Prénom) {
+	String Prenom;
+	public Acteur(String Nom,String Prenom) {
 		this.Nom = Nom;
-		this.Prénom = Prénom;
+		this.Prenom = Prenom;
 	}
 	
 	String getNom(){
 		return Nom;
 	}
 	String getPrénom(){
-		return Prénom;
+		return Prenom;
 	}
 	public String ToString() {
-		return(this.Nom + " " + this.Prénom);
+		return(this.Nom + " " + this.Prenom);
 	}
 }
