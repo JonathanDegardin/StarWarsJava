@@ -23,18 +23,23 @@ public class Main {
 		System.out.println(unFilm.ToString());
 		System.out.println(unSecondFilm.ToString());
 		System.out.println(unDernierFilm.ToString());
-
+		unFilm.AddFilm(unFilm);
+		unFilm.AddFilm(unDernierFilm);
+		unFilm.AddFilm(unSecondFilm);
 		ArrayList<Film> CollectionFilm = new ArrayList<Film>();
 		CollectionFilm.add(unFilm);
 		CollectionFilm.add(unSecondFilm);
 		CollectionFilm.add(unDernierFilm);
-		collectionToString(CollectionFilm);
+		collectionToString(unFilm.getEpisodes());
 		Personnage unPremierPerso = new Personnage("Han","Solo");
 		Personnage unSecondPerso = new Personnage("Indiana","Jones");
 		Acteur unActeur = new Acteur("Harisson","Ford");
 		unActeur.AddPersonnage(unPremierPerso);
 		unActeur.AddPersonnage(unSecondPerso);
 		System.out.println(unActeur.nbPersonnage());
+		if (unFilm.isBenefice() == true) {
+			System.out.println(unFilm.calculBenefice());
+		}
 		}
 	public Main() {}
 	public static void collectionToString(ArrayList<Film> CollectionFilm) {
