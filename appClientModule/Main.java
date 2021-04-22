@@ -1,5 +1,4 @@
-import java.util.Scanner;
-
+import java.util.*;
 import StarWars.*;
 public class Main {
 	public static void main(String[] args) {
@@ -24,8 +23,20 @@ public class Main {
 		System.out.println(unFilm.ToString());
 		System.out.println(unSecondFilm.ToString());
 		System.out.println(unDernierFilm.ToString());
+		Personnage unPerso = new Personnage("Jean","Luc");
+		ArrayList<Film> CollectionFilm = new ArrayList<Film>();
+		CollectionFilm.add(unFilm);
+		CollectionFilm.add(unSecondFilm);
+		CollectionFilm.add(unDernierFilm);
+		collectionToString(CollectionFilm);
 	}
-
+	public Main() {}
+	public static void collectionToString(ArrayList<Film> CollectionFilm) {
+		for(int i = 0 ; i<CollectionFilm.size();i++) {
+			System.out.println(CollectionFilm.get(i).ToString());
+		}
+		
+	}
 
 
 }
