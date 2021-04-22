@@ -9,6 +9,7 @@ public class Film {
 	int cout;
 	int recette;
 	ArrayList<Acteur> lesActeurs = new ArrayList<Acteur>();
+	
 	public Film(String titre,int anneeDeSortie,int nombreEpisode,int cout,int recette) {
 		this.titre = titre;
 		this.anneeDeSortie = anneeDeSortie;
